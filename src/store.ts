@@ -27,7 +27,7 @@ export const sensorStore = proxy<SensorStore>({
     }
 
     const socket = ioClient("http://192.168.1.2:8080", {
-      transports: ['websocket'],
+      transports: ['polling', 'websocket'],
       reconnectionDelay: 1000,
       reconnectionDelayMax: 5000,
       reconnectionAttempts: 5
